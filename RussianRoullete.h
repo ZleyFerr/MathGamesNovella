@@ -1,6 +1,6 @@
 #pragma once
-#include <iostream>
-#include <Windows.h>
+#include <SFML/Graphics.hpp>
+
 void russian_roullete_main()
 {
 
