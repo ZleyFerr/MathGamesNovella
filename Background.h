@@ -4,9 +4,9 @@
 sf::Texture background_Texture;
 sf::Sprite background_Sprite;
 
-void background() //background
+void background() 
 {
-    //бэкгранды от стадии игры
+    //Р±СЌРєРіСЂР°РЅРґС‹ РѕС‚ СЃС‚Р°РґРёРё РёРіСЂС‹
     if (game_stage == 0)
     {
         background_Texture.loadFromFile("Images/background_1.jpeg");
@@ -19,8 +19,7 @@ void background() //background
         max_game_stage = 2;
         game_stage = 2;
     }
-    //загрузить бэкграунд на экран
     background_Sprite.setTexture(background_Texture);
-    //экран загрузки
+    //СЌРєСЂР°РЅ Р·Р°РіСЂСѓР·РєРё
     if (game_stage != -1) loading_check = 0;
 }
