@@ -36,7 +36,7 @@ void background()
 
     if (game_stage == 2) //переход на 3 стадию
     {
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 15)
         {
             if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
             {
@@ -54,7 +54,7 @@ void background()
 
     if (game_stage == 3) //переход на 4 стадию
     {
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 15)
         {
             if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
             {
@@ -72,7 +72,7 @@ void background()
 
     if (game_stage == 4) //переход на 5 стадию
     {
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 15)
         {
             if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
             {
@@ -90,7 +90,7 @@ void background()
 
     if (game_stage == 5) //переход на 6 стадию
     {
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 15)
         {
             if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
             {
@@ -108,7 +108,7 @@ void background()
 
     if (game_stage == 6) //переход на 7 стадию
     {
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 15)
         {
             if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
             {
