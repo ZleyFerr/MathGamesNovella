@@ -25,9 +25,9 @@ void game_close(sf::RenderWindow& window) //закрытие игры
     {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
         {
-            if (game_close_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            if (continue_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
             {
-                game_close_sprite.setColor(sf::Color::Red);
+                continue_button_sprite.setColor(sf::Color::Red);
                 window.close();
             }
         }
@@ -36,7 +36,7 @@ void game_close(sf::RenderWindow& window) //закрытие игры
 
 void loading() //экран загрузки
 {
-    loading_Texture.loadFromFile("Images/loading.jpg");
+    loading_Texture.loadFromFile("Images/loading.png");
     loading_sprite.setTexture(loading_Texture);
     loading_sprite.setScale(1, 1);
 }
@@ -47,9 +47,9 @@ void game_continue(sf::RenderWindow& window)
     {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
         {
-            if (continue_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            if (game_close_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
             {
-                game_stage = max_game_stage;
+               game_stage = max_game_stage;
             }
         }
     }
