@@ -24,14 +24,14 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        funcs_load(); 
+        funcs_load();
         window.clear();
         drawFunc(window); 
         window.display();
     }
 }
 
-void funcs_load() 
+void funcs_load()
 {
 
     background();
@@ -41,6 +41,7 @@ void funcs_load()
     next_button();
     continue_button();
     game_close_button();
+    minigames();
 }
 
 void drawFunc(sf::RenderWindow& window)
@@ -48,6 +49,7 @@ void drawFunc(sf::RenderWindow& window)
     window.draw(background_Sprite);
     window.draw(text_background_sprite);
     window.draw(novella_text);
+    if (game_stage != 8 and game_stage != 3)
     window.draw(next_button_sprite);
 
     if (loading_check == 1)
@@ -55,5 +57,15 @@ void drawFunc(sf::RenderWindow& window)
         window.draw(loading_sprite);
         window.draw(game_close_sprite);
         window.draw(continue_button_sprite);
+    }
+
+    if (game_stage == 8)
+    {
+        window.draw(tic_tac_toe_field_sprite);
+        tic_tac_toe_draw(window);
+    }
+    if (game_stage == 3)
+    {
+        window.draw(answer_text);
     }
 }
