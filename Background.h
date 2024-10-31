@@ -95,7 +95,7 @@ void background()
         {
             if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
             {
-                background_Texture.loadFromFile("Images/background_1.jpeg");
+                background_Texture.loadFromFile("Images/background_1.jpg");
                 max_game_stage = 5;
                 game_stage = 5;
                 timer1 = 0;
@@ -113,7 +113,7 @@ void background()
         {
             if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
             {
-                background_Texture.loadFromFile("Images/background_1.jpeg");
+                background_Texture.loadFromFile("Images/tic_tac_toe_background.jpg");
                 max_game_stage = 6;
                 game_stage = 6;
                 timer1 = 0;
@@ -131,7 +131,7 @@ void background()
         {
             if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
             {
-                background_Texture.loadFromFile("Images/background_1.jpeg");
+                background_Texture.loadFromFile("Images/tic_tac_toe_background.jpg");
                 max_game_stage = 7;
                 game_stage = 7;
                 timer1 = 0;
@@ -156,6 +156,24 @@ void background()
             }
         }
         if (game_stage == 7)
+        {
+            timer1++;
+        }
+    }
+    if (game_stage == 9) //переход на 10 стадию (после крестиков ноликов )
+    {
+        background_Texture.loadFromFile("Images/background_2.jpg");
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 5)
+        {
+            if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/tic_tac_toe_background.jpg");
+                max_game_stage = 10;
+                game_stage = 10;
+                timer1 = 0;
+            }
+        }
+        if (game_stage == 9)
         {
             timer1++;
         }
