@@ -55,18 +55,26 @@ void novella_scene_text()
     }
     if (game_stage == 5)
     {
-        novella_text.setString(L"Текст бэкграунда 5");
+        novella_text.setCharacterSize(26);
+        novella_text.setPosition(sf::Vector2f(85, 810));
+        novella_text.setString(L"Пускай первой пойдёт Ксюша,\nона просто мастер игры в Крестики Нолики!\nЕсли ты вдруг проиграешь ей, то ты будешь наказан!");
     }
     if (game_stage == 6)
     {
-        novella_text.setString(L"Текст бэкграунда 6");
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 780));
+        novella_text.setString(L"Давай я объясню тебе правила.\nСначала ты ставишь крестик\nпотом я ставлю нолик\nкто собирает 3 в ряд - победил.\nЭто развивает логику.");
     }
     if (game_stage == 7)
     {
-        novella_text.setString(L"Текст бэкграунда 7");
+        novella_text.setString(L"Если ты вдруг проиграешь, то будешь отмывать весь класс,\nКаждую стену будешь оттирать\nТак, что постарайся)");
     }
     if (game_stage == 8)
     {
-        novella_text.setString(L"Мини игра 1 ");
+        novella_text.setString(L"Игра - Крестики Нолики\nНажмите на пустую клетку, чтобы поставить крестик\nдля победы нужно собрать 3 в ряд\nничья - запустит игру сначала!");
+    }
+    if (game_stage == 9)
+    {
+        novella_text.setString(L"stage 9");
     }
 }
