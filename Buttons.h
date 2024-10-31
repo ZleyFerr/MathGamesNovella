@@ -21,16 +21,16 @@ void next_button()
 
 void continue_button()
 {
-    continue_button_texture.loadFromFile("Images/button_continue.png");
+    continue_button_texture.loadFromFile("Images/button_close.png");
     continue_button_sprite.setTexture(continue_button_texture);
-    continue_button_sprite.setScale(0.145, 0.145);
-    continue_button_sprite.setPosition(1025, 800);
+    continue_button_sprite.setScale(0.5, 0.5);
+    continue_button_sprite.setPosition(1120, 650);
 }
 
 void game_close_button()
 {
-    game_close_texture.loadFromFile("Images/close.png");
+    game_close_texture.loadFromFile("Images/button_continue.png");
     game_close_sprite.setTexture(game_close_texture);
-    game_close_sprite.setPosition(825, 800);
-    game_close_sprite.setScale(0.2, 0.2);
+    game_close_sprite.setPosition(1120, 400);
+    game_close_sprite.setScale(0.5, 0.5);
 }
