@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Buttons.h"
-//стадия игры
+
 int game_stage = 0;
 int max_game_stage = 0;
 
@@ -12,7 +12,7 @@ bool loading_check = 1;
 sf::Texture loading_Texture;
 sf::Sprite loading_sprite;
 
-void game_close(sf::RenderWindow& window) //закрытие игры
+void game_close(sf::RenderWindow& window) 
 {
     //открытие меню
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
