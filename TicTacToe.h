@@ -381,6 +381,8 @@ void tic_tac_toe_main()
 		(map[2][0] == 'X' and map[1][1] == 'X' and map[0][2] == 'X'))
 	{
 		game_stage = 9;
+		max_game_stage = 9;
+		score++;
 	}
 	//Проверка на победу O
 	else if ((map[0][0] == 'O' and map[0][1] == 'O' and map[0][2] == 'O') or
@@ -394,10 +396,13 @@ void tic_tac_toe_main()
 	{
 		nichya = -1;
 		game_stage = 9;
+		max_game_stage = 9;
 	}
 	else if (hodnow1 == 10) 
 	{
-		game_stage = 7;
+		game_stage = 9;
+		max_game_stage = 9;
+		nichya = -1;
 	}
 }
 
