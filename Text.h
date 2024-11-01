@@ -1,6 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Menu.h"
+#include "MiniGames.h"
+
 sf::Texture text_background_texture;
 sf::Sprite text_background_sprite;
 
@@ -67,14 +69,26 @@ void novella_scene_text()
     }
     if (game_stage == 7)
     {
+        novella_text.setCharacterSize(22);
+        novella_text.setPosition(sf::Vector2f(110, 780));
         novella_text.setString(L"Если ты вдруг проиграешь, то будешь отмывать весь класс,\nКаждую стену будешь оттирать\nТак, что постарайся)");
     }
     if (game_stage == 8)
     {
-        novella_text.setString(L"Игра - Крестики Нолики\nНажмите на пустую клетку, чтобы поставить крестик\nдля победы нужно собрать 3 в ряд\nничья - запустит игру сначала!");
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 780));
+        novella_text.setString(L"Игра - Крестики Нолики\nНажмите на пустую клетку, чтобы поставить крестик\nдля победы нужно собрать 3 в ряд\nничья - считается за поражение!\nдождись пока Ксюша сходит, не спеши, она думает.");
     }
-    if (game_stage == 9)
+    if (game_stage == 9 && nichya > -1)
     {
-        novella_text.setString(L"stage 9");
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(140, 780));
+        novella_text.setString(L"Невозможно!\nКак ты?!… Аргх!!\nБуууу, ладно, ты победил.\nЧего уставился ?! Иди дальше!\nДаша тебя уже заждалась!");
+    }
+    if (game_stage == 9 && nichya == -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(140, 780));
+        novella_text.setString(L"Хаха, я же говорила, что лучшая.\nТак и быть, отдраивать будешь лишь парты,\nа не весь класс, иди к Ксюше\nно если еще раз тебя увижу прогуливающим\nто будешь весь класс драить!");
     }
 }
