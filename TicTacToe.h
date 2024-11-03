@@ -35,6 +35,8 @@ int t01 = 0, t02 = 0, t03 = 0, t04 = 0, t05 = 0, t06 = 0, t07 = 0, t08 = 0, t09 
 int tte0_x = 0, tte0_y = 0;
 
 int tte_music_started = 0;
+
+int tte_timer = 0;
 void tte_x()
 {
 	tte_x_texture.loadFromFile("Images/tic_tac_toe_x.png");
@@ -181,147 +183,160 @@ void tic_tac_toe_field()
 
 void tic_tac_toe_main()
 {
+	tte_timer++;
 	//игрок
 	tic_tac_toe_field();
-	if (game_stage == 8) 
+	if (tte_timer >10)
 	{
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		if (game_stage == 8)
 		{
-			if (tte_zone1_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
-			{	
-				if (map[0][0] == '#') 
-				{ //Проверка на то не занята ли клетка
-					map[0][0] = 'X'; // Присваивание клетке буквы
-					hodnow1++; //Увелечение счетика ходов
-					x1 = 1;
-				}
-			}
-		}
-	}
-
-	if (game_stage == 8)
-	{
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-		{
-			if (tte_zone2_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
-				if (map[0][1] == '#')
-				{ 
-					map[0][1] = 'X'; // Присваивание клетке буквы
-					hodnow1++; //Увелечение счетика ходов
-					x2 = 1;
-				}
-			}
-		}
-	}
-
-	if (game_stage == 8)
-	{
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-		{
-			if (tte_zone3_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
-			{
-				if (map[0][2] == '#')
+				if (tte_zone1_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
 				{
-					map[0][2] = 'X'; // Присваивание клетке буквы
-					hodnow1++; //Увелечение счетика ходов
-					x3 = 1;
+					if (map[0][0] == '#')
+					{ //Проверка на то не занята ли клетка
+						map[0][0] = 'X'; // Присваивание клетке буквы
+						hodnow1++; //Увелечение счетика ходов
+						x1 = 1;
+						tte_timer = 0;
+					}
 				}
 			}
 		}
-	}
 
-	if (game_stage == 8)
-	{
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		if (game_stage == 8)
 		{
-			if (tte_zone4_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
-				if (map[1][0] == '#')
+				if (tte_zone2_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
 				{
-					map[1][0] = 'X'; // Присваивание клетке буквы
-					hodnow1++; //Увелечение счетика ходов
-					x4 = 1;
+					if (map[0][1] == '#')
+					{
+						map[0][1] = 'X'; // Присваивание клетке буквы
+						hodnow1++; //Увелечение счетика ходов
+						x2 = 1;
+						tte_timer = 0;
+					}
 				}
 			}
 		}
-	}
 
-	if (game_stage == 8)
-	{
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		if (game_stage == 8)
 		{
-			if (tte_zone5_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
-				if (map[1][1] == '#')
+				if (tte_zone3_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
 				{
-					map[1][1] = 'X'; // Присваивание клетке буквы
-					hodnow1++; //Увелечение счетика ходов
-					x5 = 1;
+					if (map[0][2] == '#')
+					{
+						map[0][2] = 'X'; // Присваивание клетке буквы
+						hodnow1++; //Увелечение счетика ходов
+						x3 = 1;
+						tte_timer = 0;
+					}
 				}
 			}
 		}
-	}
 
-	if (game_stage == 8)
-	{
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		if (game_stage == 8)
 		{
-			if (tte_zone6_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
-				if (map[1][2] == '#')
+				if (tte_zone4_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
 				{
-					map[1][2] = 'X'; // Присваивание клетке буквы
-					hodnow1++; //Увелечение счетика ходов
-					x6 = 1;
+					if (map[1][0] == '#')
+					{
+						map[1][0] = 'X'; // Присваивание клетке буквы
+						hodnow1++; //Увелечение счетика ходов
+						x4 = 1;
+						tte_timer = 0;
+					}
 				}
 			}
 		}
-	}
 
-	if (game_stage == 8)
-	{
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		if (game_stage == 8)
 		{
-			if (tte_zone7_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
-				if (map[2][0] == '#')
+				if (tte_zone5_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
 				{
-					map[2][0] = 'X'; // Присваивание клетке буквы
-					hodnow1++; //Увелечение счетика ходов
-					x7 = 1;
+					if (map[1][1] == '#')
+					{
+						map[1][1] = 'X'; // Присваивание клетке буквы
+						hodnow1++; //Увелечение счетика ходов
+						x5 = 1;
+						tte_timer = 0;
+					}
 				}
 			}
 		}
-	}
 
-	if (game_stage == 8)
-	{
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		if (game_stage == 8)
 		{
-			if (tte_zone8_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
-				if (map[2][1] == '#')
+				if (tte_zone6_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
 				{
-					map[2][1] = 'X'; // Присваивание клетке буквы
-					hodnow1++; //Увелечение счетика ходов
-					x8 = 1;
+					if (map[1][2] == '#')
+					{
+						map[1][2] = 'X'; // Присваивание клетке буквы
+						hodnow1++; //Увелечение счетика ходов
+						x6 = 1;
+						tte_timer = 0;
+					}
 				}
 			}
 		}
-	}
 
-	if (game_stage == 8)
-	{
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		if (game_stage == 8)
 		{
-			if (tte_zone9_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
-				if (map[2][2] == '#')
+				if (tte_zone7_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
 				{
-					map[2][2] = 'X'; // Присваивание клетке буквы
-					hodnow1++; //Увелечение счетика ходов
-					x9 = 1;
+					if (map[2][0] == '#')
+					{
+						map[2][0] = 'X'; // Присваивание клетке буквы
+						hodnow1++; //Увелечение счетика ходов
+						x7 = 1;
+						tte_timer = 0;
+					}
+				}
+			}
+		}
+
+		if (game_stage == 8)
+		{
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			{
+				if (tte_zone8_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+				{
+					if (map[2][1] == '#')
+					{
+						map[2][1] = 'X'; // Присваивание клетке буквы
+						hodnow1++; //Увелечение счетика ходов
+						x8 = 1;
+						tte_timer = 0;
+					}
+				}
+			}
+		}
+
+		if (game_stage == 8)
+		{
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			{
+				if (tte_zone9_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+				{
+					if (map[2][2] == '#')
+					{
+						map[2][2] = 'X'; // Присваивание клетке буквы
+						hodnow1++; //Увелечение счетика ходов
+						x9 = 1;
+						tte_timer = 0;
+					}
 				}
 			}
 		}
