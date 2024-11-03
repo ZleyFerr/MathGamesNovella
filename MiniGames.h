@@ -21,6 +21,19 @@ void minigames() //запуск мини игр
     {
         tic_tac_minigame_start = 0;
     }
+
+    if (game_stage == 14)
+    {
+        tic_tac_minigame_start = 0;
+        nim_minigame_start = 1;
+        russian_roullete_minigame_start = 0;
+    }
+
+    if (game_stage == 15)
+    {
+        nim_minigame_start = 0;
+    }
+
     if (tic_tac_minigame_start == 1) tic_tac_toe_main(); 
     if (nim_minigame_start == 1) nim_main();
     if (russian_roullete_minigame_start == 1) russian_roullete_main();
