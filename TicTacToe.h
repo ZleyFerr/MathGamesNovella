@@ -2,6 +2,7 @@
 #include <vector>
 #include <random>
 #include <SFML/Graphics.hpp>
+#include "Audio.h"
 
 char map[3][3] =
 {
@@ -32,6 +33,8 @@ sf::Sprite tte_0_sprite, tte_02_sprite, tte_03_sprite, tte_04_sprite, tte_05_spr
 int x1 = 0,x2 = 0, x3 = 0, x4 = 0, x5 = 0, x6 = 0, x7 = 0, x8 = 0, x9 = 0;
 int t01 = 0, t02 = 0, t03 = 0, t04 = 0, t05 = 0, t06 = 0, t07 = 0, t08 = 0, t09 = 0;
 int tte0_x = 0, tte0_y = 0;
+
+int tte_music_started = 0;
 void tte_x()
 {
 	tte_x_texture.loadFromFile("Images/tic_tac_toe_x.png");
@@ -160,9 +163,16 @@ void tte_zone()
 
 void tic_tac_toe_field()
 {
+	if (tte_music_started == 0)
+	{
+		tic_tac_toe_music_f();
+	}
+	tte_music_started = 1;
+
 	tte_x();
 	tte_0();
 	tte_zone();
+
 	tic_tac_toe_field_texture.loadFromFile("Images/tic_tac_toe_field.png");
 	tic_tac_toe_field_sprite.setTexture(tic_tac_toe_field_texture);
 	tic_tac_toe_field_sprite.setPosition(990, 270);
@@ -171,6 +181,7 @@ void tic_tac_toe_field()
 
 void tic_tac_toe_main()
 {
+	//игрок
 	tic_tac_toe_field();
 	if (game_stage == 8) 
 	{
@@ -383,6 +394,8 @@ void tic_tac_toe_main()
 		game_stage = 9;
 		max_game_stage = 9;
 		score++;
+		tic_tac_toe_music.stop();
+		music_base.play();
 	}
 	//Проверка на победу O
 	else if ((map[0][0] == 'O' and map[0][1] == 'O' and map[0][2] == 'O') or
@@ -397,12 +410,16 @@ void tic_tac_toe_main()
 		nichya = -1;
 		game_stage = 9;
 		max_game_stage = 9;
+		tic_tac_toe_music.stop();
+		music_base.play();
 	}
 	else if (hodnow1 == 10) 
 	{
 		game_stage = 9;
 		max_game_stage = 9;
 		nichya = -1;
+		tic_tac_toe_music.stop();
+		music_base.play();
 	}
 }
 
