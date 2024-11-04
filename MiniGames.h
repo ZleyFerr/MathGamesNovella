@@ -34,6 +34,18 @@ void minigames() //запуск мини игр
         nim_minigame_start = 0;
     }
 
+    if (game_stage == 22)
+    {
+        tic_tac_minigame_start = 0;
+        nim_minigame_start = 0;
+        russian_roullete_minigame_start = 1;
+    }
+
+    if (game_stage == 23)
+    {
+        russian_roullete_minigame_start = 0;
+    }
+
     if (tic_tac_minigame_start == 1) tic_tac_toe_main(); 
     if (nim_minigame_start == 1) nim_main();
     if (russian_roullete_minigame_start == 1) russian_roullete_main();
