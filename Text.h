@@ -23,7 +23,7 @@ void text_background()
     text_background_sprite.setColor(sf::Color(0,0,0, 128));
 }
 
-void novella_scene_text() 
+void novella_scene_text()
 {
     font.loadFromFile("Fonts/MOSCOW2024.otf");
     novella_text.setFont(font);
@@ -37,7 +37,7 @@ void novella_scene_text()
     {
 
         novella_text.setString(L"Под вечер, когда солнечные лучи начали расчленять тени на асфальте,\nпрогульщик, осознавший прелесть безмятежных часов,\nнатолкнулся на группу студентов из дисциплинарного комитета.\nИх лица выражали смесь строгости и любопытства,\nа глаза искрились неподдельным интересом.");
-    }
+    }   
     if (game_stage == 3)
     {
         novella_text.setCharacterSize(40);
@@ -156,9 +156,168 @@ void novella_scene_text()
 
     if (game_stage == 16)
     {
-        text_background_sprite.setPosition(30, 720);
         novella_text.setCharacterSize(24);
         novella_text.setPosition(sf::Vector2f(110, 780));
-        novella_text.setString(L"Признаться, я удивлена, думала, ты не дойдешь до меня..\nмне казалось ты уже пойдешь на уроки..\n");
+        novella_text.setString(L"Признаться, я удивлена, думала, ты не дойдешь до меня..\nмне казалось ты уже пойдешь на уроки..\nя даже успела пиджак поменять..");
     }
+
+    if (game_stage == 17)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 780));
+        novella_text.setString(L"Ну раз уж ты стоишь передо мной..\nЯ, как глава дисциплинарного комитета,\nПредлагаю тебе сыграть в финальную игру..");
+    }
+
+    if (game_stage == 18)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 780));
+        novella_text.setString(L"Точнее, выбора у тебя нет, ха-ха\nМоя любимая тема это:\nматематической логика и теория вероятностей\nА это значит, что мы с тобой сыграем...");
+    }
+
+    if (game_stage == 19)
+    {
+        novella_text.setCharacterSize(35);
+        novella_text.setPosition(sf::Vector2f(125, 750));
+        novella_text.setPosition(sf::Vector2f(110, 780));
+        novella_text.setString(L"Это очень весёлая игра, угадай)");
+        answer_text.setFont(font);
+        answer_text.setCharacterSize(28);
+        answer_text.setFillColor(sf::Color::Cyan);
+        answer_text.setScale(1, 1.1);
+        answer_text.setPosition(sf::Vector2f(65, 850));
+        answer_text.setString(L"-Морской бой?\n\n-Суефа??)");
+    }
+
+    if (game_stage == 20)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 780));
+        novella_text.setString(L"Наивный..\nМы с тобой сыграем в русскую рулетку\nно разумеется безопасную)\nна водяных пистолетах.\nПравила предельно просты.");
+    }
+
+    if (game_stage == 21)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 780));
+        novella_text.setString(L"Всего есть 8 водных пистолетиков\nнекоторые из них закупорены\nа другие - открытые\nу каждого из нас есть лишь 1 попытка намочиться\nна кого вода попадает второй раз - проиграл.\nДумаю ты готов, пойдем на улицу.");
+    }
+
+    if (game_stage == 22)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 755));
+        novella_text.setString(L"Выберите в кого вы стрельните в Кариму или в себя\nКоличество закупоренных и открытых (по умолчанию!) ниже\nслева - жизни игрока, справа - каримы.\nесли ход не делается - зажми кнопку");
+    }
+
+    if (game_stage == 23 && rr_win == 1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 755));
+        novella_text.setString(L"Фффф...\nИз-за тебя я вся промокла..\nПрогульщик чёртов..\nладно, пойдем к остальным.\nтолько пиджак обратно переодену..");
+        text_background_texture.loadFromFile("Images/text_background.png");
+        text_background_sprite.setTexture(text_background_texture);
+        text_background_sprite.setScale(1.5, 0.7);
+        text_background_sprite.setPosition(30, 720);
+        text_background_sprite.setColor(sf::Color(0, 0, 0, 128));
+    }
+
+    if (game_stage == 23 && rr_win == 0)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 755));
+        novella_text.setString(L"Ха-ха, это было слишком просто, мокрый мальчик)\nСейчас мы пойдем к остальным\nи изберем тебе меру наказания.\n");
+    }
+
+    if (game_stage == 24)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 755));
+        novella_text.setString(L"Ну что-ж, вся наша коллегия в сборе.\nсейчас мы решим, что будем с тобой делать.\nдавай выслушаем всех.");
+    }
+
+    if (game_stage == 25 && nichya > -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 755));
+        novella_text.setString(L"Он смог обыграть меня..\nОн правда умный\nдевочки, решайте без меня..");
+    }
+
+    if (game_stage == 25 && nichya == -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 755));
+        novella_text.setString(L"Он не смог обыграть меня..\nтак что он будет отдраивать парты в классе\nпускай даша скажет, выиграл ли он её");
+    }
+
+    if (game_stage == 26 && nim_win == 1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 755));
+        novella_text.setString(L"Прогульщик умный.\nон победил меня в ниме,\nкарима, слово за тобой.");
+    }
+
+    if (game_stage == 26 && nim_win == 0)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(110, 755));
+        novella_text.setString(L"парнишка не смог победить меня в ниме,\nно я добрая, так что\nкарима, слово за тобой.");
+    }
+
+    if (game_stage == 27 && rr_win == 1 && nim_win == 1 && nichya > -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(75, 755));
+        novella_text.setString(L"Да уж.. парнишка, хоть ты и прогульщик..\nНо ты обограл нас всех..\nтак уж и быть, можешь не ходить на мат.логику\nиди, гуляй.\n\nEscape - выход из игры");
+    }
+
+    if (game_stage == 27 && rr_win == 0 && nim_win == 1 && nichya > -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(75, 755));
+        novella_text.setString(L"Да уж.. парнишка, хоть ты и прогульщик..\nНо ты обыграл моих замов..\nтак уж и быть, иди гуляй\nно, чтобы следующий раз был на уроке!\n\nEscape - выход из игры");
+    }
+
+    if (game_stage == 27 && rr_win == 1 && nim_win == 0 && nichya > -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(75, 755));
+        novella_text.setString(L"Да уж.. парнишка, хоть ты и прогульщик..\nНо ты обыграл меня и Ксюшу\nтак уж и быть, иди гуляй\nно, я бы посоветовала тебе ходить на уроки!\n\nEscape - выход из игры");
+    }
+
+    if (game_stage == 27 && rr_win == 0 && nim_win == 0 && nichya > -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(75, 755));
+        novella_text.setString(L"Да уж.. парнишка, хоть ты и прогульщик..\nНо ты обыграл Ксюшу\nтак, что парты драить не будешь.\nа сейчас, живо на урок!\n\nEscape - выход из игры");
+    }
+
+    if (game_stage == 27 && rr_win == 1 && nim_win == 1 && nichya == -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(75, 755));
+        novella_text.setString(L"Да уж.. парнишка, хоть ты и прогульщик..\nНо ты обыграл меня и Дашу\nтак, что на урок можешь не идти,\nно завтра придешь драить парты в классе!\n\nEscape - выход из игры");
+    }
+
+    if (game_stage == 27 && rr_win == 0 && nim_win == 1 && nichya == -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(75, 755));
+        novella_text.setString(L"Да уж.. парнишка, ты обыграл Дашу \nтак, что жаловаться на тебя не буду,\nно этого мало - живо на урок!\nи завтра придешь драить парты в классе!\n\nEscape - выход из игры");
+    }
+
+    if (game_stage == 27 && rr_win == 0 && nim_win == 0 && nichya == -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(75, 755));
+        novella_text.setString(L"Да уж..\nТы оказался гораздо глупее, чем мы думали..\nты будешь исключён из школы за прогулы.\nживо к директору.\n\nEscape - выход из игры");
+    }
+
+    if (game_stage == 27 && rr_win == 1 && nim_win == 0 && nichya == -1)
+    {
+        novella_text.setCharacterSize(24);
+        novella_text.setPosition(sf::Vector2f(75, 755));
+        novella_text.setString(L"Да уж..\nТы оказался гораздо глупее, чем мы думали..\nты не будешь исключён из школы за прогулы.\nно сейчас живо на урок!\n\nEscape - выход из игры");
+    }
+
 }
