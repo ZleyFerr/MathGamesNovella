@@ -7,6 +7,10 @@ sf::Music tic_tac_toe_music;
 sf::Music nim_music;
 sf::Music nim_hod_music;
 sf::Music karima_music;
+sf::Music rr_music;
+sf::Music rr_shot_music;
+sf::Music rr_noshot_music;
+sf::Music end_music;
 
 void music()
 {
@@ -45,4 +49,32 @@ void karima_music_f()
 {
 	karima_music.openFromFile("Audio/karina_sound.mp3");
 	karima_music.setVolume(10.0f);
+}
+
+void rr_music_f()
+{
+	rr_music.openFromFile("Audio/rr_sound.mp3");
+	rr_music.setVolume(17.5f);
+	rr_music.play();
+	karima_music.stop();
+}
+
+void rr_shot_f()
+{
+	rr_shot_music.openFromFile("Audio/shot_sound.mp3");
+	rr_shot_music.play();
+}
+
+void rr_noshot_f()
+{
+	rr_noshot_music.openFromFile("Audio/noshot_sound.mp3");
+	rr_noshot_music.play();
+}
+
+void end_music_f()
+{
+	end_music.openFromFile("Audio/end_sound.mp3");
+	end_music.setVolume(5.0f);
+	karima_music.stop();
+	end_music.play();
 }
