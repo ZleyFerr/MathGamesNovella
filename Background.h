@@ -26,7 +26,7 @@ void answers()
     answer2_sprite.setScale(0.40, 0.025);
     answer2_sprite.setPosition(60, 920);
 }
-void background() 
+void background()
 {
     answers();
     //бэкгранды от стадии игры
@@ -294,7 +294,7 @@ void background()
         }
     }
 
-    if (game_stage == 15) //после нима
+    if (game_stage == 15) //после нима на 16
     {
         background_Texture.loadFromFile("Images/background_4.jpg");
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
@@ -311,6 +311,198 @@ void background()
             }
         }
         if (game_stage == 15)
+        {
+            timer1++;
+        }
+    }
+
+    if (game_stage == 16) //на 17 стадию
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        {
+            if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/background_7.jpg");
+                max_game_stage = 17;
+                game_stage = 17;
+                timer1 = 0;
+                swap_slide_music_f();
+            }
+        }
+        if (game_stage == 16)
+        {
+            timer1++;
+        }
+    }
+
+    if (game_stage == 17) //на 18 стадию
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        {
+            if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/background_7.jpg");
+                max_game_stage = 18;
+                game_stage = 18;
+                timer1 = 0;
+                swap_slide_music_f();
+            }
+        }
+        if (game_stage == 17)
+        {
+            timer1++;
+        }
+    }
+
+    if (game_stage == 18) //на 19 стадию
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        {
+            if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/background_8.jpg");
+                max_game_stage = 19;
+                game_stage = 19;
+                timer1 = 0;
+                swap_slide_music_f();
+            }
+        }
+        if (game_stage == 18)
+        {
+            timer1++;
+        }
+    }
+
+    if (game_stage == 19) //на 20 стадию
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        {
+            if (answer1_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y) || answer2_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/background_8.jpg");
+                max_game_stage = 20;
+                game_stage = 20;
+                timer1 = 0;
+                swap_slide_music_f();
+            }
+        }
+        if (game_stage == 19)
+        {
+            timer1++;
+        }
+    }
+
+    if (game_stage == 20) //на 21 стадию
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        {
+            if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/background_8.jpg");
+                max_game_stage = 21;
+                game_stage = 21;
+                timer1 = 0;
+                swap_slide_music_f();
+            }
+        }
+        if (game_stage == 20)
+        {
+            timer1++;
+        }
+    }
+
+    if (game_stage == 21) //на 22 rr
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        {
+            if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/background_9.jpg");
+                max_game_stage = 22;
+                game_stage = 22;
+                timer1 = 0;
+                swap_slide_music_f();
+            }
+        }
+        if (game_stage == 21)
+        {
+            timer1++;
+        }
+    }
+
+    if (game_stage == 23) //на 24 
+    {
+        background_Texture.loadFromFile("Images/background_7.jpg");
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        {
+            if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/background_10.jpg");
+                max_game_stage = 24;
+                game_stage = 24;
+                timer1 = 0;
+                swap_slide_music_f();
+            }
+        }
+        if (game_stage == 23)
+        {
+            timer1++;
+        }
+    }
+
+    if (game_stage == 24) //на 25 
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        {
+            if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/background_2.jpeg");
+                max_game_stage = 25;
+                game_stage = 25;
+                timer1 = 0;
+                swap_slide_music_f();
+            }
+        }
+        if (game_stage == 24)
+        {
+            timer1++;
+        }
+    }
+
+    if (game_stage == 25) //на 26
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        {
+            if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/background_11.jpg");
+                max_game_stage = 26;
+                game_stage = 26;
+                timer1 = 0;
+                swap_slide_music_f();
+            }
+        }
+        if (game_stage == 25)
+        {
+            timer1++;
+        }
+    }
+
+    if (game_stage == 26) //на 27 финал
+    {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && timer1 > 30)
+        {
+            if (next_button_sprite.getGlobalBounds().contains(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y))
+            {
+                background_Texture.loadFromFile("Images/background_final.jpg");
+                max_game_stage = 27;
+                game_stage = 27;
+                timer1 = 0;
+                swap_slide_music_f();
+                end_music_f();
+            }
+        }
+        if (game_stage == 26)
         {
             timer1++;
         }
