@@ -7,6 +7,8 @@ int max_game_stage = 0;
 
 int score = 0;
 
+sf::Event event1;
+
 bool loading_check = 1;
 
 sf::Texture loading_Texture;
@@ -14,7 +16,7 @@ sf::Sprite loading_sprite;
 
 void game_close(sf::RenderWindow& window) 
 {
-    //открытие меню
+    //открытие 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
     {
         game_stage = -1;
