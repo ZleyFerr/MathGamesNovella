@@ -49,10 +49,12 @@ void drawFunc(sf::RenderWindow& window)
     window.draw(background_Sprite);
     window.draw(text_background_sprite);
     window.draw(novella_text);
-    if (game_stage != 8 and game_stage != 3 and game_stage != 11 and game_stage != 14)
+
+    if (game_stage != 8 and game_stage != 3 and game_stage != 11 and game_stage != 14 and game_stage != 19 and game_stage != 22 and game_stage != 27)
     {
         window.draw(next_button_sprite);
     }
+
     if (loading_check == 1)
     {
         window.draw(loading_sprite);
@@ -65,7 +67,8 @@ void drawFunc(sf::RenderWindow& window)
         window.draw(tic_tac_toe_field_sprite);
         tic_tac_toe_draw(window);
     }
-    if (game_stage == 3 || game_stage == 11)
+
+    if (game_stage == 3 || game_stage == 11 || game_stage == 19)
     {
         window.draw(answer_text);
     }
@@ -73,6 +76,11 @@ void drawFunc(sf::RenderWindow& window)
     if (game_stage == 14)
     {
         nim_draw(window);
+    }
+
+    if (game_stage == 22)
+    {
+        rr_draw(window);
     }
 }
 
