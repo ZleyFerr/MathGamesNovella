@@ -268,7 +268,7 @@ void novella_scene_text()
     {
         novella_text.setCharacterSize(24);
         novella_text.setPosition(sf::Vector2f(75, 755));
-        novella_text.setString(L"Да уж.. парнишка, хоть ты и прогульщик..\nНо ты обограл нас всех..\nтак уж и быть, можешь не ходить на мат.логику\nиди, гуляй.\n\nEscape - выход из игры");
+        novella_text.setString(L"Да уж.. парнишка, хоть ты и прогульщик..\nНо ты обыграл нас всех..\nтак уж и быть, можешь не ходить на мат.логику\nиди, гуляй.\n\nEscape - выход из игры");
     }
 
     if (game_stage == 27 && rr_win == 0 && nim_win == 1 && nichya > -1)
